@@ -49,10 +49,11 @@
   # Enable the Plasma 5 Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.xfce.enable = true; # Enable mlvwm by commenting this section out and uncomment the bottom code.
-  # To enable MLVWM:
-  # services.xserver.displayManager.defaultSession = "none+mlvwm";
+  # To enable MLVWM or i3:
+  # services.xserver.displayManager.defaultSession = "none+mlvwm"; (or "none+i3")
   # services.xserver.windowManager = {
   #    mlvwm.enable = true;
+  #    i3.enable = false; (can leave it as true, same effect)
   # }
   # and then save [$ nix-env -iA nixos.mlvwm && nixos-rebuild switch && reboot] 
   
