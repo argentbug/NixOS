@@ -48,7 +48,13 @@
 
   # Enable the Plasma 5 Desktop Environment.
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
+  services.xserver.desktopManager.xfce.enable = true; # Enable mlvwm by commenting this section out and uncomment the bottom code.
+  # To enable MLVWM:
+  # services.xserver.displayManager.defaultSession = "none+mlvwm";
+  # services.xserver.windowManager = {
+  #    mlvwm.enable = true;
+  # }
+  # and then save [$ nix-env -iA nixos.mlvwm && nixos-rebuild switch && reboot] 
   
 
   # Configure keymap in X11
